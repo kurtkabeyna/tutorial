@@ -1,16 +1,30 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div class="container">
-            <div class="banner">
+        <div className="container">
+            <div className="banner">
                 <h1>Artixx is the best way to learn </h1>
-                <button>Start</button>
+                <div className="buttons">
+                    <Link to={"/register"}>
+                        <button button className="blob-btn">Start Now
+                            <span className="blob-btn__inner">
+                                <span className="blob-btn__blobs">
+                                    <span className="blob-btn__blob"></span>
+                                    <span className="blob-btn__blob"></span>
+                                    <span className="blob-btn__blob"></span>
+                                    <span className="blob-btn__blob"></span>
+                                </span>
+                            </span>
+                        </button>
+                    </Link>
+                    <br />
+                    {/* ... */}
+                </div>
             </div>
+        </div >
+    );
+};
 
-        </div>
-
-    )
-}
-
-export default Banner
+export default Banner;

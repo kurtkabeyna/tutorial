@@ -6,14 +6,24 @@
   box-sizing: border-box;
 }
 
-body {
-  background: #fff;
-  color: #222;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 300;
-
+button:hover {
+  font-size: 25px;
+  background: linear-gradient(180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(86, 25, 112, 0.32) 100%),
+    rgba(154, 87, 241, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+  border-radius: 12px;
+  transform: scale(1.05);
 }
 
+button:active {
+  transform: scale(0.95);
+  background: linear-gradient(180deg,
+      rgba(111, 80, 234, 0.8) 0%,
+      rgb(3, 27, 24) 100%);
+  box-shadow: 0 0 10px rgba(12, 96, 180, 0.8);
+}
 
 header ul.nav {
   margin-top: 20px;
@@ -28,7 +38,6 @@ header ul.nav li {
   margin-left: 25px;
   color: rgb(255, 255, 255);
   cursor: pointer;
-
 }
 
 .faq-item {
@@ -44,6 +53,14 @@ header ul.nav li {
   cursor: pointer;
 }
 
+.question:hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  color: rgb(251, 219, 176);
+}
+
 .answer {
   display: none;
   margin-top: 10px;
@@ -54,6 +71,12 @@ header ul.nav li {
   cursor: pointer;
 }
 
+.toggle-icon:hover {
+  font-size: 20px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+}
+
 .toggle-icon.open {
   transform: rotate(180deg);
 }
@@ -61,44 +84,70 @@ header ul.nav li {
 .PAA {
   max-width: 1280px;
   margin: 0 auto;
-  /* Центрирование блока по горизонтали */
   padding: 20px;
-  /* Пример: добавление внутреннего отступа */
 }
 
 header ul.nav li:hover {
   opacity: 0.5;
+  font-size: 10px;
+  transition: background 0.5s ease-in-out, transform 0.5s ease-in-out, font-size 0.3s ease-in-out;
 }
 
 header {
-  background-color: #222;
+  background: rgb(46, 46, 90);
   height: 100px;
   margin-top: 0;
   justify-content: center;
   align-items: center;
   display: flex;
+  opacity: 100%;
+
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+}
+
+.nav a {
+  text-decoration: none;
+  color: inherit;
+  margin-right: 20px;
 }
 
 header .logo {
   color: rgb(255, 255, 255);
   border-radius: 30px;
-
   font-weight: 600;
   font-size: 80px;
   cursor: pointer;
-  background: linear-gradient(to right, #feffff, #1c1e22);
+  background: linear-gradient(to right, #feffff, #5c65dd0a);
   -webkit-background-clip: text;
   color: transparent;
   padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /*template*/
 html,
 body {
-  background: rgb(255, 255, 255);
-  overscroll-behavior: none;
-  font-family: "Inter";
+  background: linear-gradient(to bottom, #2715677b, #b587f6);
+  color: #fff;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
 }
 
 .banner {
@@ -114,7 +163,7 @@ body {
   border: #222;
   padding: 4em;
   opacity: 0.75;
-
+  cursor: pointer;
 }
 
 .banner h1 {
@@ -131,13 +180,17 @@ body {
   font-size: 80px;
   letter-spacing: -0.05em;
   line-height: 1;
+  margin-bottom: 70px;
 }
 
 button {
+  border-radius: 6px;
+  transition: background 0.5s ease-in-out, transform 0.5s ease-in-out, border-radius 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  width: 400px;
   margin: 3em 0;
-  padding: 1em 1.5em;
+  padding: 1.5em 2.5em;
   color: #fff;
-  font-size: 27px;
+  font-size: 32px;
   border: 1px solid rgba(149, 99, 255, 0.5);
   outline: none;
   border-radius: 0.75em;
@@ -148,4 +201,100 @@ button {
       rgba(60, 8, 126, 0.32) 100%),
     rgba(113, 47, 255, 0.12);
   box-shadow: inset 0 0 12px #bf97ff3d;
+}
+
+/* Register */
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+}
+
+.forma {
+  background-color: rgba(255, 255, 255, 0.2);
+
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  margin: 20px auto;
+  backdrop-filter: blur(10px);
+}
+
+.sbl {
+  margin-bottom: 30px;
+  width: 440px;
+  margin-left: 0;
+}
+
+
+.nameI,
+.passwordI {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.registerB,
+.loginI {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  padding: 20px;
+  margin-top: 20px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out, transform 0.5s ease-in-out, border-radius 0.5s ease-in-out, font-size 0.5s ease-in-out;
+}
+
+
+
+.login {
+  background-image: url('./img/10859816.jpg');
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.register {
+  background-image: url('./img/majestic-4k-purple-swirls-x53n9zqdyi3kgngx.jpg');
+  background-size: cover;
+}
+
+.login p,
+.register p {
+  margin-top: 10px;
+}
+
+.login .loginI,
+.register .loginI {
+  margin-top: 10px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-radial-gradient(circle at 0 0, transparent 0, #e5e5f7 25px), repeating-linear-gradient(#444cf755, #444cf7);
+  opacity: 0.2;
+  pointer-events: none;
+  z-index: -1;
 }

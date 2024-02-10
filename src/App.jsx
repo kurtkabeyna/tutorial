@@ -1,27 +1,25 @@
-import React from 'react'
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Banner from './components/Banner';
-import PeoplaAlsoAsk from './components/PeoplaAlsoAsk';
+import React from 'react';
 import './components/PeoplaAlsoAsk.css';
-
+import Home from './pages/Home';
+import Register from './pages/Register';  // Import the Register component
+import Login from './pages/Login';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 const App = () => {
   return (
-    <div className='wrapper'>
-      <Header />
-      <Banner />
-      <Footer />
-      <div className="PAA">
-
-        <PeoplaAlsoAsk question="Как купить криптовалюту?" answer="dqwdqwdwqdwqdqwdwq..." />
-        <PeoplaAlsoAsk question="Как купить криптовалюту?" answer="Вам нужно сделать следующее..." />
-        <PeoplaAlsoAsk question="Как купить криптовалюту?" answer="Вам нужно сделать следующее..." />
-        <PeoplaAlsoAsk question="Как купить криптовалюту?" answer="Вам нужно сделать следующее..." />
-      </div>
-    </div>
-
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </Router>
   );
 };
 
-export default App
+export default App;
