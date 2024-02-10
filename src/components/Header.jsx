@@ -1,20 +1,18 @@
-import React from 'react'
+import React from 'react';
 import PersonIcon from '@mui/icons-material/Person';
-
+import MenuIcon from '@mui/icons-material/Menu';
 export default function Header() {
     return (
         <header>
-
             <div>
                 <span className='logo'>Artixx</span>
-                <profile><PersonIcon /></profile>
                 <ul className='nav'>
-                    <li>Аккаунт</li>
-                    <li>Меню</li>
-                    <li>Статьи</li>
+                    <li><PersonIcon /></li>
+                    <li><MenuIcon /></li>
+
                 </ul>
             </div>
             <div className='presentation'></div>
         </header>
-    )
+    );
 }

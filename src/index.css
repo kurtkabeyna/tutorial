@@ -14,11 +14,13 @@ body {
 
 }
 
+
 header ul.nav {
   margin-top: 20px;
   list-style: none;
-
-
+  position: absolute;
+  top: 10px;
+  right: 20px;
 }
 
 header ul.nav li {
@@ -29,13 +31,48 @@ header ul.nav li {
 
 }
 
+.faq-item {
+  border: 1px solid #ccc;
+  margin: 10px;
+  padding: 10px;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.answer {
+  display: none;
+  margin-top: 10px;
+}
+
+.toggle-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+.PAA {
+  max-width: 1280px;
+  margin: 0 auto;
+  /* Центрирование блока по горизонтали */
+  padding: 20px;
+  /* Пример: добавление внутреннего отступа */
+}
+
 header ul.nav li:hover {
   opacity: 0.5;
 }
 
 header {
   background-color: #222;
-  height: 200px;
+  height: 100px;
   margin-top: 0;
   justify-content: center;
   align-items: center;
@@ -45,9 +82,15 @@ header {
 header .logo {
   color: rgb(255, 255, 255);
   border-radius: 30px;
+
   font-weight: 600;
   font-size: 80px;
   cursor: pointer;
+  background: linear-gradient(to right, #feffff, #1c1e22);
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 /*template*/
